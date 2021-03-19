@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProfileUser(props) {
+function ProfileUser() {
     return (
         <div></div>
     );

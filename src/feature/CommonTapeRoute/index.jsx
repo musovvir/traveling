@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CommonTapeRoute(props) {
+function CommonTapeRoute() {
     return (
         <div></div>
     );

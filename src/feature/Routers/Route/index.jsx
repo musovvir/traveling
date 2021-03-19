@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Route(props) {
+function Route() {
     return (
         <div>
 
