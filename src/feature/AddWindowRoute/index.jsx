@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import Checkout from "./Checkout";
 
 function AddWindowRoute(props) {
-    return (
-        <div>
-
-        </div>
-    );
+  return (
+    <div>
+      <Checkout />
+    </div>
+  );
 }
 
 export default AddWindowRoute;
