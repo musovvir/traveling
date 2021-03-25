@@ -37,6 +37,27 @@ function Registration() {
 
   const classes = useStyles();
 
+  const [firstname, setFirstname] = React.useState("");
+  const [lastname, setLastname] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
+  const handleChangeFirstname = (event) => {
+    setFirstname(event.target.value);
+  };
+
+  const handleChangeLastname = (event) => {
+    setLastname(event.target.value);
+  };
+
+  const handleChangeEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleChangePassword = (event) => {
+    setPassword(event.target.value);
+  };
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -57,6 +78,8 @@ function Registration() {
                 required
                 fullWidth
                 id="firstName"
+                value={firstname}
+                onChange={handleChangeFirstname}
                 label="Имя"
                 autoFocus
               />
@@ -67,6 +90,8 @@ function Registration() {
                 required
                 fullWidth
                 id="lastName"
+                value={lastname}
+                onChange={handleChangeLastname}
                 label="Фамилия"
                 name="lastName"
                 autoComplete="lname"
@@ -78,6 +103,8 @@ function Registration() {
                 required
                 fullWidth
                 id="email"
+                value={email}
+                onChange={handleChangeEmail}
                 label="e-mail Адрес"
                 name="email"
                 autoComplete="email"
@@ -89,6 +116,8 @@ function Registration() {
                 required
                 fullWidth
                 name="password"
+                value={password}
+                onChange={handleChangePassword}
                 label="Пароль"
                 type="password"
                 id="password"
