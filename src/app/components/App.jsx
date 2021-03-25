@@ -1,3 +1,9 @@
+import React from "react";
+import AddWindowRoute from "../../feature/AddWindowRoute";
+import Routers from "../../feature/Routers";
+import Login from "../../feature/LogIn";
+import City from "../../feature/City";
+import ProfileAccordion from "../../feature/ProfileAccordion";
 import Registration from "../../feature/Registration";
 import Authorization from "../../feature/Authorization";
 import AddWindowRoute from "../../feature/AddWindowRoute";
@@ -9,6 +15,9 @@ import EditProfileUser from "../../feature/EditProfileUser/index";
 function App() {
   return (
     <div className="App">
+      <ProfileAccordion />
+      <Login />
+      <City />
       <Registration />
       <Authorization />
       <SearchRoute />

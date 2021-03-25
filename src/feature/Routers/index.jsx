@@ -1,7 +1,8 @@
 import React from "react";
+import Route from "./Route";
 
 function Routers() {
-  return <div></div>;
+  return <Route />;
 }
 
 export default Routers;
