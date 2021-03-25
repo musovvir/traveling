@@ -1,7 +1,7 @@
 import React from "react";
 import Checkout from "./Checkout";
 
-function AddWindowRoute(props) {
+function AddWindowRoute() {
   return (
     <div>
       <Checkout />
