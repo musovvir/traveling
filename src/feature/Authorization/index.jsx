@@ -37,6 +37,18 @@ function Authorization() {
 
   const classes = useStyles();
 
+  const [email, setEmail] = React.useState("");
+
+  const [password, setPassword] = React.useState("");
+
+  const handleChangeEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleChangePassword = (event) => {
+    setPassword(event.target.value);
+  };
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -54,6 +66,8 @@ function Authorization() {
             required
             fullWidth
             id="email"
+            value={email}
+            onChange={handleChangeEmail}
             label="е-mail Адрес"
             name="email"
             autoComplete="email"
@@ -65,6 +79,8 @@ function Authorization() {
             required
             fullWidth
             name="password"
+            value={password}
+            onChange={handleChangePassword}
             label="Пароль"
             type="password"
             id="password"
@@ -91,7 +107,7 @@ function Authorization() {
             </Grid>
             <Grid item>
               <Link href="#" variant="body2">
-                {"Нет учетной записи? Регистрация"}
+                {"Нет учетной записи? Создать"}
               </Link>
             </Grid>
           </Grid>

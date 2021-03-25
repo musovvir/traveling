@@ -1,0 +1,113 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*SearchRoute*/
+
+.search-route {
+  width: 480px;
+  margin: auto;
+  padding: 20px 20px;
+  border: 2px solid darkslateblue;
+  border-radius: 5px;
+  /*box-shadow: ;*/
+}
+
+.search-route .MuiOutlinedInput-input {
+  width: 200px !important;
+}
+
+.search-route .MuiInputBase-input:invalid {
+  opacity: 0.6;
+}
+
+.block-routes {
+  margin: auto;
+  text-align: center;
+}
+
+.block-date {
+  margin: auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.button-search {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/*ProfileUser*/
+
+.profile-user {
+  width: 480px;
+  height: 320px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  border: 2px solid darkslateblue;
+}
+
+/*AvatarUser*/
+
+.avatar-user {
+  margin-left: 20px;
+  text-align: center;
+}
+
+.user-name {
+  margin: 35px 0 0 20px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.edit {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.head-profile {
+  display: flex;
+}
+
+.date-of-birth,
+.city,
+.telephone,
+.email {
+  display: flex;
+  margin: 20px 30px 0 30px;
+  justify-content: space-between;
+  opacity: 0.7;
+}
+
+/*EditProfileUser*/
+
+.edit-profile-user {
+  width: 600px;
+  margin: auto;
+  padding: 30px 0;
+  border-radius: 5px;
+  border: 2px solid darkslateblue;
+}
+
+.info-block-up,
+.info-block-down {
+  display: flex;
+}
+
+.info-block-down {
+  margin: 0 0 0 145px;
+}
+
+.edit-name {
+  margin-left: 30px;
+}
+
+.edit-profile-user .MuiInputBase-root {
+  width: 130px;
+}
+
+.button-save {
+  margin: 20px 0 0 30px;
+}
