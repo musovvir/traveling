@@ -45,7 +45,6 @@
   margin: 0 0 0 5px;
 }
 
-
 /*Login*/
 
 .login {
@@ -88,11 +87,10 @@
   cursor: pointer;
 }
 
-
 /*AddressForm*/
 
 .makeStyles-paper-7 {
-  margin-top: 90px!important;
+  margin-top: 90px !important;
 }
 
 .MuiTypography-alignCenter {
@@ -117,7 +115,8 @@
   width: 600px;
   height: auto;
   border-radius: 5px;
-  box-shadow: 0 2px 1px -1px #a5a5a5, 0 2px 2px 1px #efefef, 0 1px 3px 1px #efefef;
+  box-shadow: 0 2px 1px -1px #a5a5a5, 0 2px 2px 1px #efefef,
+    0 1px 3px 1px #efefef;
   font-size: 19px;
   display: flex;
   background-color: #fff;
@@ -182,9 +181,32 @@
   position: absolute;
   right: 5px;
   bottom: -5px;
-=======
+}
+
 body {
   font-family: "Roboto", sans-serif;
+}
+
+/*Authorization*/
+
+.authorization {
+  width: 480px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 1px -1px #a5a5a5, 0 2px 2px 1px #efefef,
+    0 1px 3px 1px #efefef;
+}
+
+/*Registration*/
+
+.registration-user {
+  width: 480px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 1px -1px #a5a5a5, 0 2px 2px 1px #efefef,
+    0 1px 3px 1px #efefef;
 }
 
 /*SearchRoute*/
@@ -193,7 +215,9 @@ body {
   width: 480px;
   margin: auto;
   padding: 20px 20px;
-  border: 2px solid darkslateblue;
+  background-color: #fff;
+  box-shadow: 0 2px 1px -1px #a5a5a5, 0 2px 2px 1px #efefef,
+  0 1px 3px 1px #efefef;
   border-radius: 5px;
   /*box-shadow: ;*/
 }
@@ -230,8 +254,10 @@ body {
   margin: auto;
   padding-top: 20px;
   padding-bottom: 5px;
+  background-color: #fff;
   border-radius: 5px;
-  border: 2px solid darkslateblue;
+  box-shadow: 0 2px 1px -1px #a5a5a5, 0 2px 2px 1px #efefef,
+  0 1px 3px 1px #efefef;
 }
 
 /*AvatarUser*/
@@ -272,8 +298,10 @@ body {
   width: 600px;
   margin: auto;
   padding: 30px 0;
+  background-color: #fff;
   border-radius: 5px;
-  border: 2px solid darkslateblue;
+  box-shadow: 0 2px 1px -1px #a5a5a5, 0 2px 2px 1px #efefef,
+  0 1px 3px 1px #efefef;
 }
 
 .info-block-up,

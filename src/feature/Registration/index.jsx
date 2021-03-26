@@ -59,100 +59,104 @@ function Registration() {
   };
 
   return (
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Регистрация
-        </Typography>
-        <form className={classes.form} noValidate>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                autoComplete="fname"
-                name="firstName"
-                variant="outlined"
-                required
-                fullWidth
-                id="firstName"
-                value={firstname}
-                onChange={handleChangeFirstname}
-                label="Имя"
-                autoFocus
-              />
+    <div className="registration-user">
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <div className={classes.paper}>
+          <Avatar className={classes.avatar}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Регистрация
+          </Typography>
+          <form className={classes.form} noValidate>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  autoComplete="fname"
+                  name="firstName"
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="firstName"
+                  value={firstname}
+                  onChange={handleChangeFirstname}
+                  label="Имя"
+                  autoFocus
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="lastName"
+                  value={lastname}
+                  onChange={handleChangeLastname}
+                  label="Фамилия"
+                  name="lastName"
+                  autoComplete="lname"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="email"
+                  value={email}
+                  onChange={handleChangeEmail}
+                  label="e-mail Адрес"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="password"
+                  value={password}
+                  onChange={handleChangePassword}
+                  label="Пароль"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <FormControlLabel
+                  control={
+                    <Checkbox value="allowExtraEmails" color="primary" />
+                  }
+                  label="Я хочу получать ваши назойливые рассылки."
+                />
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="lastName"
-                value={lastname}
-                onChange={handleChangeLastname}
-                label="Фамилия"
-                name="lastName"
-                autoComplete="lname"
-              />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+              Зарегистрироваться
+            </Button>
+            <Grid container justify="flex-end">
+              <Grid item>
+                <Link href="#" variant="body2">
+                  Уже есть аккаунт? Войти
+                </Link>
+              </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="email"
-                value={email}
-                onChange={handleChangeEmail}
-                label="e-mail Адрес"
-                name="email"
-                autoComplete="email"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                name="password"
-                value={password}
-                onChange={handleChangePassword}
-                label="Пароль"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <FormControlLabel
-                control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="Я хочу получать ваши назойливые рассылки."
-              />
-            </Grid>
-          </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            Зарегистрироваться
-          </Button>
-          <Grid container justify="flex-end">
-            <Grid item>
-              <Link href="#" variant="body2">
-                Уже есть аккаунт? Войти
-              </Link>
-            </Grid>
-          </Grid>
-        </form>
-      </div>
-      <Box mt={5}>
-        <Copyright />
-      </Box>
-    </Container>
+          </form>
+        </div>
+        <Box mt={5}>
+          <Copyright />
+        </Box>
+      </Container>
+    </div>
   );
 }
 
