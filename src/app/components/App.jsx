@@ -6,8 +6,6 @@ import City from "../../feature/City";
 import ProfileAccordion from "../../feature/ProfileAccordion";
 import Registration from "../../feature/Registration";
 import Authorization from "../../feature/Authorization";
-import AddWindowRoute from "../../feature/AddWindowRoute";
-import Routers from "../../feature/Routers";
 import SearchRoute from "../../feature/SearchRoute";
 import ProfileUser from "../../feature/ProfileUser";
 import EditProfileUser from "../../feature/EditProfileUser/index";
