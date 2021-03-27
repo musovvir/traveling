@@ -60,140 +60,142 @@ function AddressForm(props) {
   };
 
   return (
-    <React.Fragment>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
-          <form className={classes.root} noValidate autoComplete="off">
-            <TextField
+    <div className="addressForm">
+      <React.Fragment>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6}>
+            <form className={classes.root} noValidate autoComplete="off">
+              <TextField
+                required
+                id="outlined-basic"
+                label="Откуда"
+                variant="outlined"
+                value={from}
+                onChange={handleChangeFrom}
+              />
+            </form>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <form className={classes.root} noValidate autoComplete="off">
+              <TextField
+                required
+                id="outlined-basic"
+                label="Куда"
+                variant="outlined"
+                value={where}
+                onChange={handleChangeWhere}
+              />
+            </form>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControl
               required
-              id="outlined-basic"
-              label="Откуда"
               variant="outlined"
-              value={from}
-              onChange={handleChangeFrom}
-            />
-          </form>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <form className={classes.root} noValidate autoComplete="off">
-            <TextField
-              required
-              id="outlined-basic"
-              label="Куда"
-              variant="outlined"
-              value={where}
-              onChange={handleChangeWhere}
-            />
-          </form>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <FormControl
-            required
-            variant="outlined"
-            className={classes.formControl}
-          >
-            <InputLabel id="demo-simple-select-outlined-label">
-              Выберите транспорт
-            </InputLabel>
-            <Select
-              labelId="demo-simple-select-outlined-label"
-              id="demo-simple-select-outlined"
-              value={transport}
-              onChange={handleChangeTransport}
-              label="Выберите транспорт"
+              className={classes.formControl}
             >
-              <MenuItem value={10}>Самолёт</MenuItem>
-              <MenuItem value={20}>Автобус</MenuItem>
-              <MenuItem value={30}>Машина</MenuItem>
-              <MenuItem value={30}>Поезд</MenuItem>
-            </Select>
-          </FormControl>
+              <InputLabel id="demo-simple-select-outlined-label">
+                Выберите транспорт
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-outlined-label"
+                id="demo-simple-select-outlined"
+                value={transport}
+                onChange={handleChangeTransport}
+                label="Выберите транспорт"
+              >
+                <MenuItem value={10}>Самолёт</MenuItem>
+                <MenuItem value={20}>Автобус</MenuItem>
+                <MenuItem value={30}>Машина</MenuItem>
+                <MenuItem value={30}>Поезд</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <form className={classes.root} noValidate autoComplete="off">
+              <TextField
+                required
+                id="outlined-basic"
+                label="Цена перевоза за 1кг"
+                className={classes.textField}
+                variant="outlined"
+                value={sumKg}
+                onChange={handleChangeSumKg}
+              />
+            </form>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <form className={classes.root} noValidate autoComplete="off">
+              <TextField
+                required
+                id="outlined-basic"
+                label="Максимальный вес"
+                variant="outlined"
+                value={weight}
+                onChange={handleChangeWeight}
+              />
+            </form>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <form className={classes.root} noValidate autoComplete="off">
+              <TextField
+                required
+                id="outlined-basic"
+                label="Минимальная цена перевоза"
+                variant="outlined"
+                value={sum}
+                onChange={handleChangeSum}
+              />
+            </form>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <form className={classes.root} noValidate autoComplete="off">
+              <TextField
+                required
+                id="datetime-local"
+                type="datetime-local"
+                label="Время вылета/выезда"
+                className={classes.textField}
+                variant="outlined"
+                value={departure}
+                onChange={handleChangeDeparture}
+                InputLabelProps={{
+                  shrink: true,
+                }}
+              />
+            </form>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <form className={classes.root} noValidate autoComplete="off">
+              <TextField
+                required
+                id="datetime-local"
+                type="datetime-local"
+                label="Время прилёта/приезда"
+                className={classes.textField}
+                variant="outlined"
+                value={arrival}
+                onChange={handleChangeArrival}
+                InputLabelProps={{
+                  shrink: true,
+                }}
+              />
+            </form>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <form className={classes.root} noValidate autoComplete="off">
+              <TextField
+                required
+                id="outlined-basic"
+                label="Комментарий"
+                variant="outlined"
+                value={comment}
+                onChange={handleChangeComment}
+              />
+            </form>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <form className={classes.root} noValidate autoComplete="off">
-            <TextField
-              required
-              id="outlined-basic"
-              label="Цена перевоза за 1кг"
-              className={classes.textField}
-              variant="outlined"
-              value={sumKg}
-              onChange={handleChangeSumKg}
-            />
-          </form>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <form className={classes.root} noValidate autoComplete="off">
-            <TextField
-              required
-              id="outlined-basic"
-              label="Максимальный вес"
-              variant="outlined"
-              value={weight}
-              onChange={handleChangeWeight}
-            />
-          </form>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <form className={classes.root} noValidate autoComplete="off">
-            <TextField
-              required
-              id="outlined-basic"
-              label="Минимальная цена перевоза"
-              variant="outlined"
-              value={sum}
-              onChange={handleChangeSum}
-            />
-          </form>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <form className={classes.root} noValidate autoComplete="off">
-            <TextField
-              required
-              id="datetime-local"
-              type="datetime-local"
-              label="Время вылета/выезда"
-              className={classes.textField}
-              variant="outlined"
-              value={departure}
-              onChange={handleChangeDeparture}
-              InputLabelProps={{
-                shrink: true,
-              }}
-            />
-          </form>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <form className={classes.root} noValidate autoComplete="off">
-            <TextField
-              required
-              id="datetime-local"
-              type="datetime-local"
-              label="Время прилёта/приезда"
-              className={classes.textField}
-              variant="outlined"
-              value={arrival}
-              onChange={handleChangeArrival}
-              InputLabelProps={{
-                shrink: true,
-              }}
-            />
-          </form>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <form className={classes.root} noValidate autoComplete="off">
-            <TextField
-              required
-              id="outlined-basic"
-              label="Комментарий"
-              variant="outlined"
-              value={comment}
-              onChange={handleChangeComment}
-            />
-          </form>
-        </Grid>
-      </Grid>
-    </React.Fragment>
+      </React.Fragment>
+    </div>
   );
 }
 

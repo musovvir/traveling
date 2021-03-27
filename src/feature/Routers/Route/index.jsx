@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 
 function Route() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -75,7 +76,9 @@ function Route() {
           </Button>
         </Accordion>
       </div>
-      <div className="exit">X</div>
+      <div className="exit">
+        <HighlightOffIcon />
+      </div>
     </div>
   );
 }

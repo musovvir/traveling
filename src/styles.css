@@ -1,5 +1,11 @@
-.App {
+body {
+  font-family: "Roboto", sans-serif;
   background-color: #efefef;
+}
+
+.App {
+  height: 100vh;
+
 }
 
 /*ProfileAccordion*/
@@ -48,10 +54,9 @@
 /*Login*/
 
 .login {
-  position: absolute;
+  justify-content: flex-end;
+  padding: 20px 0;
   color: dodgerblue;
-  top: 10%;
-  right: 28%;
   display: flex;
 }
 
@@ -89,24 +94,44 @@
 
 /*AddressForm*/
 
-.makeStyles-paper-7 {
+.addressForm .makeStyles-paper-7 {
   margin-top: 90px !important;
 }
 
-.MuiTypography-alignCenter {
+ .MuiTypography-alignCenter {
   margin-bottom: 20px !important;
 }
 
-.MuiOutlinedInput-input {
+ .MuiOutlinedInput-input {
   width: 225px !important;
 }
 
-.MuiInputBase-input:invalid {
+ .MuiInputBase-input:invalid {
   opacity: 0.6;
 }
 
-.MuiSelect-outlined.MuiSelect-outlined {
+ .MuiSelect-outlined.MuiSelect-outlined {
   width: 210px !important;
+}
+
+ .MuiTypography-alignCenter {
+  margin-bottom: 30px;
+}
+
+/*Routers*/
+
+.routers {
+  width: 600px;
+  margin: auto;
+}
+
+.add-route {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-icon {
+
 }
 
 /*Route*/
@@ -138,7 +163,6 @@
   margin: 20px;
   padding: 18px 14px;
   border-radius: 3px;
-  height: 60px;
   color: #999498;
 }
 
@@ -164,16 +188,16 @@
   display: flex;
 }
 
-.MuiAccordion-rounded:last-child {
+.route .MuiAccordion-rounded:last-child {
   box-shadow: none;
 }
 
-.MuiAccordion-root.Mui-expanded:last-child {
+.route .MuiAccordion-root.Mui-expanded:last-child {
   width: 100%;
   position: relative;
 }
 
-.MuiAccordionSummary-root.Mui-expanded {
+.route .MuiAccordionSummary-root.Mui-expanded {
   margin-bottom: -50px;
 }
 
@@ -181,10 +205,6 @@
   position: absolute;
   right: 5px;
   bottom: -5px;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
 }
 
 /*Authorization*/

@@ -3,23 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
-import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import AddressForm from "../AddressForm";
-
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -87,9 +73,9 @@ function Checkout(props) {
               <React.Fragment>
                 {getStepContent(activeStep)}
                 <div className={classes.buttons}>
-                  <Button className={classes.button}>
-                    Назад
-                  </Button>
+                  <Link to="/routers">
+                    <Button className={classes.button}>Назад</Button>
+                  </Link>
                   <Button
                     variant="contained"
                     color="primary"
