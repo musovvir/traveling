@@ -1,21 +1,23 @@
 import React from "react";
 import AddWindowRoute from "../../feature/AddWindowRoute";
-import Routers from "../../feature/Routers";
 import Login from "../../feature/LogIn";
-import City from "../../feature/City";
-import ProfileAccordion from "../../feature/ProfileAccordion";
+import City from "./City";
+import ProfileAccordion from "./ProfileAccordion";
 import Registration from "../../feature/Registration";
 import Authorization from "../../feature/Authorization";
 import SearchRoute from "../../feature/SearchRoute";
 import ProfileUser from "../../feature/ProfileUser";
 import EditProfileUser from "../../feature/EditProfileUser/index";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
+import Directions from "../../feature/Directions";
+import Direction from "../../feature/Directions/Direction";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Route path="/routers" component={Routers} />
+        <Route path="/directions" component={Directions} />
+        <Route path="/direction" component={Direction} />
         <Route path="/profileAccordion" component={ProfileAccordion} />
         <Route path="/login" component={Login} />
         <Route path="/city" component={City} />

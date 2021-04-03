@@ -1,10 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
-  const data = await fetch("https://jsonplaceholder.typicode.com/todos");
-  const json = await data.json();
+  const json = await api.get("/users/1");
 
-  return json;
+  return json.data;
 });
 
 const registrationSlice = createSlice({
@@ -30,12 +29,12 @@ const registrationSlice = createSlice({
     },
 
     [fetchTodos.fulfilled]: (state, action) => {
-      state.items = action.payloaad;
+      state.items = action.payload;
       state.loading = false;
     },
   },
 });
 
-export default registrstionSlice.reducer;
+export default registrationSlice.reducer;
 
-export const { addTodos } = registrstionSlice.actions;
+export const { addTodos } = registrationSlice.actions;

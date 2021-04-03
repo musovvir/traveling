@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 
-function Route() {
+function Direction() {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const useStyles = makeStyles((theme) => ({
@@ -83,4 +83,4 @@ function Route() {
   );
 }
 
-export default Route;
+export default Direction;

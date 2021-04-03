@@ -1,5 +1,5 @@
 import React from "react";
-import Route from "./Route";
+import Route from "./Direction";
 import { Link } from "react-router-dom";
 import {
   createMuiTheme,
@@ -11,7 +11,7 @@ import Button from "@material-ui/core/Button";
 import { green, purple } from "@material-ui/core/colors";
 import SearchIcon from "@material-ui/icons/Search";
 
-function Routers() {
+function Directions() {
   const ColorButton = withStyles((theme) => ({
     root: {
       color: theme.palette.getContrastText(purple[500]),
@@ -69,4 +69,4 @@ function Routers() {
   );
 }
 
-export default Routers;
+export default Directions;
