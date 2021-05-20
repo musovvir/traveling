@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { api } from "../../app/components/api";
 
 export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
   const json = await api.get("/users/1");

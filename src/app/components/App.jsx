@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AddWindowRoute from "../../feature/AddWindowRoute";
 import Login from "../../feature/LogIn";
 import City from "./City";
@@ -11,8 +11,23 @@ import EditProfileUser from "../../feature/EditProfileUser/index";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import Directions from "../../feature/Directions";
 import Direction from "../../feature/Directions/Direction";
+import { db } from "../../firebase";
 
 function App() {
+  useEffect(() => {
+    db.collection("users")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          // doc.data() is never undefined for query doc snapshots
+          console.log(doc.id, " => ", doc.data());
+        });
+      })
+      .catch((error) => {
+        console.log("Error getting documents: ", error);
+      });
+  });
+
   return (
     <div className="App">
       <BrowserRouter>
